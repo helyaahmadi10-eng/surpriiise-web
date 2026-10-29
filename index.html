@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>یه گوشه از دنیای من ❤️</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #241735;
+    color: #FFF5F7;
+    font-family: Tahoma, sans-serif;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 92%;
+    max-width: 520px;
+    margin: auto;
+    padding: 25px 12px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    color: #FF8FAB;
+    font-size: 24px;
+}
+
+.decor {
+    color: #FF8FAB;
+    font-size: 25px;
+    margin: 20px;
+}
+
+.intro {
+    line-height: 2.2;
+    font-size: 14px;
+    margin: 20px 0;
+}
+
+button {
+    display: block;
+    width: 100%;
+    max-width: 340px;
+    margin: 13px auto;
+    padding: 16px 10px;
+    border: none;
+    border-radius: 14px;
+    background: #593B70;
+    color: white;
+    font-family: Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:active {
+    background: #FF8FAB;
+    color: #241735;
+}
+
+#message {
+    display: none;
+    margin: 22px auto;
+    padding: 18px 14px;
+    border: 1px solid #FF8FAB;
+    border-radius: 16px;
+    color: #FFD6E0;
+    font-size: 14px;
+    line-height: 2.3;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+#qr {
+    display: none;
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+    margin: 18px auto;
+    border-radius: 10px;
+}
+
+footer {
+    color: #FF8FAB;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    pointer-events: none;
+    animation: floatUp linear forwards;
+    z-index: 0;
+}
+
+@keyframes floatUp {
+    to {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<h1>یه گوشه از دنیای من ❤️</h1>
+<div class="decor">♥️ ♡ ♥️ ♡ ♥️</div>
+
+<div class="intro">
+یه نفر اینجاست که به‌جای اینکه بشینه برای امتحانش درس بخونه
+<br><br>
+از خلاقیتش استفاده کرده تا یه کوچولو لبخند بیاره روی لبت 😁💜
+<br>
+پس خیلی لبخند بزنیااااا 😤😂🤍
+<br><br>
+کلی تلاش کردم اینو درست کنمااا! 🦦😌💋
+</div>
+
+<button id="btnLetter">💌 یه یادآوری کوچولو</button>
+<button id="btnSurprise">😂 یه چیز گوگولی‌مگولی</button>
+<button id="btnCute">🧸 حرفای آخرم</button>
+
+<div id="message"></div>
+
+<img id="qr" src="qr-negareno-336133.png" alt="QR کد آهنگ">
+
+
+</div>
+
+<script>
+const message = document.getElementById("message");
+const qr = document.getElementById("qr");
+
+function showMessage(text) {
+    message.textContent = text;
+    message.style.display = "block";
+    qr.style.display = "none";
+    message.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+document.getElementById("btnLetter").addEventListener("click", function() {
+    showMessage(`╭───────────────♡───────────────╮
+
+❤️ می‌دونم شاید این روزها اون‌طوری که دلت می‌خواد نگذره، شاید خسته باشی، شاید ذهنت پر از فکرهای جورواجور باشه... ولی خواستم یه چیز کوچیک رو یادت بندازم.
+
+لازم نیست همیشه قوی باشی، لازم نیست همیشه لبخند بزنی، گاهی فقط کافیه بدونی این روزها هم می‌گذرن.
+
+بین تمام اتفاق‌های قشنگ و سخت زندگی، بدون که من خیلی زیاد دوست دارم، بی‌ادب! ❤️
+
+امیدوارم وقتی این صفحه رو باز می‌کنی، حتی برای چند ثانیه هم که شده، لبخند کوچیکی روی لبت بشینه.
+
+یادت نره که بودنت برای من ارزشمنده؛ نه فقط روزهایی که حالت خوبه، بلکه همین روزهایی که شاید حوصله هیچ‌چیزی رو نداری ❤️
+
+ولی هنوز کلی اتفاق قشنگ مونده که باید با هم تجربه کنیم ♡
+تو هنوز به من شیرینی ندادی آخه 😝
+
+╰───────────────♡───────────────╯`);
+});
+
+document.getElementById("btnSurprise").addEventListener("click", function() {
+    showMessage("حالا برو آهنگتو گوش بده و به کسی که اینو برات درست کرده فکر کن ❤️😎");
+    qr.style.display = "block";
+    qr.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+});
+
+document.getElementById("btnCute").addEventListener("click", function() {
+    showMessage(`دیگه ببخشید یکم مبتدی بود 😂❤️
+
+
+خودمم می‌دونم معمولی می‌تونستم برات بفرستم ولییییی باید یه جوری خلاقیتمو به رخ می‌کشیدم!
+
+اصلاً فضولیییییی! 😌
+
+ولی می‌گمااا کیف می‌کنی دختری مثل من توی زندگیت داریا، دیگه مثل من گیرت نمیاد!
+
+توی جهان یکی بوده که اونم گیر تو اومده ❤️
+
+حالا جدا از شوخی خواستم یه چیز متفاوت برات درست کنم که بتونه یکم حالتو خوب کنه.
+
+اگر حتی چند ثانیه لبخند زدی یعنی ارزششو داشته.
+
+این دفعه رایگان سورپرایز شدی، دفعه بعد باید اشتراک بخری برای دیدن سورپرایزام 😙`);
+});
+
+function createHeart() {
+    const heart = document.createElement("div");
+    const hearts = ["❤️", "💗", "💕", "💖", "💜"];
+
+    heart.className = "heart";
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = Math.random() * 95 + "vw";
+    heart.style.fontSize = (15 + Math.random() * 15) + "px";
+    heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(function() {
+        heart.remove();
+    }, 10000);
+}
+
+setInterval(createHeart, 500);
+</script>
+</body>
+</html>
